@@ -5,13 +5,13 @@ CXX = c++
 CXXFLAGS = -Wall -g
 
 # Target executable
-TARGET = build/main
+TARGET = build/simulate
 
 # For deleting the target
-TARGET_DEL = build/main
+TARGET_DEL = build/simulate
 
 # Source files
-SRCS = src/main.cpp 
+SRCS = apps/simulate.cpp src/gbm.cpp 
 # Object files
 OBJS = $(SRCS:.cpp=.o)
 
@@ -25,7 +25,7 @@ $(TARGET): $(OBJS)
 
 # Rule to compile .cpp files into .o files
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -Iinclude -c $< -o $@
 
 # Rule to run the executable
 run: $(TARGET)

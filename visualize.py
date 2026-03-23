@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("build/paths.csv")  
+df = pd.read_csv("data/paths.csv")  
 time = df.iloc[:, 0]
 
 paths = df.iloc[:, 1:]

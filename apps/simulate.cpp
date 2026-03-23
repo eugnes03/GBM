@@ -3,10 +3,10 @@
 #include <iostream>
 #include <random>
 int main() {
-  std::mt19937 gen(42);
+  std::mt19937 gen(13);
 
-  int steps = 10;
-  int n_paths = 2;
+  int steps = 1000;
+  int n_paths = 50;
   double dt = 0.01;
 
   double S0 = 100.0;
@@ -22,8 +22,8 @@ int main() {
     }
     std::cout << "----\n";
   }
-  write_paths_to_csv("build/paths.csv", paths, dt);
+  write_paths_to_csv("data/paths.csv", paths, dt);
 
-  std::cout << "Saved to build/paths.csv\n";
+  std::cout << "Saved to data/paths.csv\n";
   return 0;
 }

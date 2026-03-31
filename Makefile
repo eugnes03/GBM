@@ -11,7 +11,7 @@ TARGET = build/simulate
 TARGET_DEL = build/simulate
 
 # Source files
-SRCS = apps/simulate.cpp src/gbm.cpp src/csv.cpp 
+SRCS = apps/simulate.cpp src/gbm.cpp src/csv.cpp src/black_scholes.cpp src/monte_carlo.cpp
 # Object files
 OBJS = $(SRCS:.cpp=.o)
 

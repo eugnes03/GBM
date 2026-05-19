@@ -10,7 +10,7 @@ int main() {
   std::mt19937 gen(13);
 
   int steps = 1000;
-  int n_paths = 1000;
+  int n_paths = 10000;
   double dt = 0.01;
 
   double S0    = 100.0;
